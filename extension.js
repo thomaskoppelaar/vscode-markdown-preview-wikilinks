@@ -51,3 +51,8 @@ function activate(context) {
     };
 }
 exports.activate = activate;
+
+exports.PageNameGenerator = PageNameGenerator;
+exports.postProcessPageName = postProcessPageName;
+exports.postProcessLabel = postProcessLabel;
+
