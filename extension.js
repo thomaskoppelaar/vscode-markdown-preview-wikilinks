@@ -21,7 +21,7 @@ function PageNameGenerator(label) {
     }).join('/');
 }
 
-function postProcessPageName (pageName) {
+function postProcessPageName(pageName) {
     pageName = pageName.trim();
 
 	// Sanitize filenames and slugify
@@ -31,7 +31,7 @@ function postProcessPageName (pageName) {
 
 }
   
-function postProcessLabel (label) {
+function postProcessLabel(label) {
 	label = label.trim();
 	
 	// Remove filename extension
@@ -46,12 +46,17 @@ function postProcessLabel (label) {
 function activate(context) {
     return {
         extendMarkdownIt(md) {
-            return md.use(require('@thomaskoppelaar/markdown-it-wikilinks')({ generatePageNameFromLabel: PageNameGenerator, postProcessPageName: postProcessPageName, postProcessLabel: postProcessLabel, uriSuffix: '.md' }));
+            return md.use(
+                require('@thomaskoppelaar/markdown-it-wikilinks')({ 
+                    generatePageNameFromLabel: PageNameGenerator, 
+                    postProcessPageName: postProcessPageName, 
+                    postProcessLabel: postProcessLabel,
+                    uriSuffix: '.md' 
+                }));
         }
     };
 }
 exports.activate = activate;
-
 exports.PageNameGenerator = PageNameGenerator;
 exports.postProcessPageName = postProcessPageName;
 exports.postProcessLabel = postProcessLabel;
