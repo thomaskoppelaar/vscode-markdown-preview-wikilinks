@@ -4,7 +4,7 @@
 	"displayName": "Markdown Wiki-links preview",
 	"description": "Enables wikilinks in the Markdown preview.",
 	"license": "MIT",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"bugs": {
 		"url": "https://github.com/thomaskoppelaar/vscode-markdown-preview-wikilinks/issues"
 	},
