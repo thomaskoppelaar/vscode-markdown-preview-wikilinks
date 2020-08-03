@@ -46,7 +46,6 @@ function postProcessLabel(label) {
 function activate(context) {
     return {
         extendMarkdownIt(md) {
-            vscode.window.showInformationMessage("activated md");
             return md.use(
                 
                 require('@thomaskoppelaar/markdown-it-wikilinks')({ 
