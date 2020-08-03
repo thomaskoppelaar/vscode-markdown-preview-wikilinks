@@ -32,12 +32,12 @@ function postProcessPageName(pageName) {
 }
   
 function postProcessLabel(label) {
-	label = label.trim();
-	
-	// Remove filename extension
-	label = label.replace(/\.[^/.]+$/, "");
-	
-	// De-slugify and add matching brackets
+    label = label.trim();
+    
+    // Remove filename extension
+    label = label.replace(/\.[^/.]+$/, "");
+    
+    // De-slugify and add matching brackets
     label = label.split("-").join(" ");
     return `[[${label}]]`;
 }
@@ -46,7 +46,9 @@ function postProcessLabel(label) {
 function activate(context) {
     return {
         extendMarkdownIt(md) {
+            vscode.window.showInformationMessage("activated md");
             return md.use(
+                
                 require('@thomaskoppelaar/markdown-it-wikilinks')({ 
                     generatePageNameFromLabel: PageNameGenerator, 
                     postProcessPageName: postProcessPageName, 
