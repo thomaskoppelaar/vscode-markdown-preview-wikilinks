@@ -1,5 +1,4 @@
 'use strict'
-
 const _ = require('lodash')
 const sanitize = require('sanitize-filename')
  

@@ -1,5 +1,4 @@
 secret
 node_modules
-.vscodeignore
 *.vsix
-out
+dist

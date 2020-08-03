@@ -15,7 +15,7 @@
 	"activationEvents": [
 		"onLanguage:markdown"
 	],
-	"main": "./out/extension.js",
+	"main": "./dist/extension",
 	"contributes": {
 		"markdown.markdownItPlugins": true
 	},
@@ -39,6 +39,6 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"@thomaskoppelaar/markdown-it-wikilinks": "^1.0.2"
+		"@thomaskoppelaar/markdown-it-wikilinks": "1.0.2"
 	}
 }
