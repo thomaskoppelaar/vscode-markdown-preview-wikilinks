@@ -4,7 +4,7 @@
 	"displayName": "Markdown Wiki-links preview",
 	"description": "Enables wikilinks in the Markdown preview.",
 	"license": "MIT",
-	"version": "1.0.5",
+	"version": "1.1.0",
 	"repository": {},
 	"engines": {
 		"vscode": "^1.47.0"
@@ -18,7 +18,7 @@
 	"main": "./dist/extension",
 	"contributes": {
 		"markdown.markdownItPlugins": true,
-		"configuration":[
+		"configuration": [
 			{
 				"title": "Markdown Wiki-links preview",
 				"properties": {
@@ -30,7 +30,11 @@
 					"markdown-wiki-links-preview.previewlabelstyling": {
 						"type": "string",
 						"default": "[[label]]",
-						"enum": ["[[label]]", "[label]", "label"],
+						"enum": [
+							"[[label]]",
+							"[label]",
+							"label"
+						],
 						"description": "Changes how the link to a file should be shown, either with or without brackets."
 					},
 					"markdown-wiki-links-preview.showextension": {
