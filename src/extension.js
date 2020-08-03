@@ -1,4 +1,5 @@
 'use strict'
+const vscode = require('vscode')
 const _ = require('lodash')
 const sanitize = require('sanitize-filename')
  
@@ -38,7 +39,19 @@ function postProcessLabel(label) {
 	
 	// De-slugify and add matching brackets
     label = label.split("-").join(" ");
-    return `[[${label}]]`;
+    if (vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('showextension')) {
+        label += vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix');
+    }
+
+    switch (vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('previewlabelstyling')) {
+        case "[[label]]":
+            return `[[${label}]]`;
+        case "[label]":
+            return `[${label}]`;
+        case "label":
+            return label;
+    }
+    ;
 }
 
 
@@ -51,7 +64,7 @@ function activate(context) {
                     generatePageNameFromLabel: PageNameGenerator, 
                     postProcessPageName: postProcessPageName, 
                     postProcessLabel: postProcessLabel,
-                    uriSuffix: '.md' 
+                    uriSuffix: `${vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix')}` 
                 }));
         }
     };

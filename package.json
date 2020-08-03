@@ -17,7 +17,30 @@
 	],
 	"main": "./dist/extension",
 	"contributes": {
-		"markdown.markdownItPlugins": true
+		"markdown.markdownItPlugins": true,
+		"configuration":[
+			{
+				"title": "Markdown Wiki-links preview",
+				"properties": {
+					"markdown-wiki-links-preview.urisuffix": {
+						"type": "string",
+						"default": ".md",
+						"description": "The suffix to use when creating the link to files."
+					},
+					"markdown-wiki-links-preview.previewlabelstyling": {
+						"type": "string",
+						"default": "[[label]]",
+						"enum": ["[[label]]", "[label]", "label"],
+						"description": "Changes how the link to a file should be shown, either with or without brackets."
+					},
+					"markdown-wiki-links-preview.showextension": {
+						"type": "boolean",
+						"default": false,
+						"description": "Specifies whether or not to show the linked file's extension in the preview."
+					}
+				}
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "webpack --mode production",
