@@ -32,12 +32,12 @@ function postProcessPageName(pageName) {
 }
   
 function postProcessLabel(label) {
-    label = label.trim();
-    
-    // Remove filename extension
-    label = label.replace(/\.[^/.]+$/, "");
-    
-    // De-slugify and add matching brackets
+	label = label.trim();
+	
+	// Remove filename extension
+	label = label.replace(/\.[^/.]+$/, "");
+	
+	// De-slugify and add matching brackets
     label = label.split("-").join(" ");
     return `[[${label}]]`;
 }

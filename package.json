@@ -5,26 +5,12 @@
 	"description": "Enables wikilinks in the Markdown preview.",
 	"license": "MIT",
 	"version": "1.0.4",
-	"bugs": {
-		"url": "https://github.com/thomaskoppelaar/vscode-markdown-preview-wikilinks/issues"
-	},
 	"repository": {},
 	"engines": {
 		"vscode": "^1.47.0"
 	},
-	"author": {
-		"name": "Thomas Koppelaar",
-		"email": "thomaskoppelaar@protonmail.com"
-	},
 	"categories": [
 		"Other"
-	],
-	"keywords": [
-		"markdown",
-		"note-taking",
-		"foam",
-		"wikilinks",
-		"writing"
 	],
 	"activationEvents": [
 		"onLanguage:markdown"
