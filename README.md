@@ -20,6 +20,6 @@ Uses a [fork of a markdown-it plugin](https://github.com/thomaskoppelaar/markdow
 
 ## Roadmap
 
-- [ ] User defined settings
-  - [ ] File type (`.markdown`, `.mdx`, etc.)
+- [X] User defined settings
+  - [X] File type (`.markdown`, `.mdx`, etc.)
 
