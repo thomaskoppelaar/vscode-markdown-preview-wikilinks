@@ -1,14 +1,27 @@
 {
+	"author": {
+		"name": "Thomas Koppelaar"
+	},
 	"publisher": "thomaskoppelaar",
 	"name": "markdown-wiki-links-preview",
 	"displayName": "Markdown Wiki-links preview",
 	"description": "Enables wikilinks in the Markdown preview.",
 	"license": "MIT",
 	"version": "1.1.0",
-	"repository": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thomaskoppelaar/vscode-markdown-preview-wikilinks.git"
+	},
 	"engines": {
 		"vscode": "^1.47.0"
 	},
+	"keywords": [
+		"foam",
+		"markdown",
+		"note-taking",
+		"md",
+		"wikilinks"
+	],
 	"categories": [
 		"Other"
 	],
