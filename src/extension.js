@@ -64,7 +64,8 @@ function activate(context) {
                     generatePageNameFromLabel: PageNameGenerator, 
                     postProcessPageName: postProcessPageName, 
                     postProcessLabel: postProcessLabel,
-                    uriSuffix: `${vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix')}` 
+                    uriSuffix: `${vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix')}`,
+                    description_then_file: vscode.workspace.getConfiguration("markdown-wiki-links-preview").get("descriptionthenfile"),
                 }));
         }
     };

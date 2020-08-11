@@ -54,6 +54,11 @@
 						"type": "boolean",
 						"default": false,
 						"description": "Specifies whether or not to show the linked file's extension in the preview."
+					},
+					"markdown-wiki-links-preview.descriptionthenfile": {
+						"type": "boolean",
+						"default": false,
+						"description": "States whether or not the description is the first item in the wikilink. On true: This means your wikilink syntax should look like [[desciption|file]]"
 					}
 				}
 			}
@@ -79,6 +84,6 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"@thomaskoppelaar/markdown-it-wikilinks": "1.0.2"
+		"@thomaskoppelaar/markdown-it-wikilinks": "1.1.0"
 	}
 }
