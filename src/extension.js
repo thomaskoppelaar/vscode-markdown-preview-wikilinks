@@ -26,7 +26,7 @@ function postProcessPageName(pageName) {
 
 	// Sanitize filenames and slugify
     pageName = pageName.split('/').map(sanitize).join('/');
-    pageName = pageName.replace(/\s+/, '-');
+    pageName = pageName.split(/\s+/).join('-');
     return pageName;
 
 }
@@ -66,6 +66,7 @@ function activate(context) {
                     postProcessLabel: postProcessLabel,
                     uriSuffix: `${vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix')}`,
                     description_then_file: vscode.workspace.getConfiguration("markdown-wiki-links-preview").get("descriptionthenfile"),
+                    separator: vscode.workspace.getConfiguration("markdown-wiki-links-preview").get("WikiLinksSeparator"),
                 }));
         }
     };

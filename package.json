@@ -59,6 +59,13 @@
 						"type": "boolean",
 						"default": false,
 						"description": "States whether or not the description is the first item in the wikilink. On true: This means your wikilink syntax should look like [[desciption|file]]"
+					},
+					"markdown-wiki-links-preview.WikiLinksSeparator": {
+						"type": "string",
+						"default": "\\|",
+						"pattern": "[^\\[\\]\\.]+",
+						"patternErrorMessage": "Warning: This separator will unfortunately not work - It would break the wikilink syntax.",
+						"markdownDescription": "States what separator should be used - **Note: Special regex characters should be escaped! Example: '|' should be '\\\\|'**"
 					}
 				}
 			}
@@ -84,6 +91,6 @@
 		"webpack-cli": "^3.3.12"
 	},
 	"dependencies": {
-		"@thomaskoppelaar/markdown-it-wikilinks": "1.1.0"
+		"@thomaskoppelaar/markdown-it-wikilinks": "1.2.0"
 	}
 }
