@@ -1,5 +1,7 @@
 # Markdown Wikilinks Preview
 
+**Note: Markdown Notes now has a better version of this, integrated into the extension itself. I would not recommend using this in combination with it.**
+
 Allows wikilinks features within the VSCode markdown preview. 
 
 Uses a [fork of a markdown-it plugin](https://github.com/thomaskoppelaar/markdown-it-wikilinks) ([original here](https://github.com/jsepia/markdown-it-wikilinks) In order to make linking markdown documents a bit more rewarding - The VSCode preview window now also shows wikilinks correctly.
