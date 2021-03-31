@@ -5,6 +5,8 @@ const sanitize = require('sanitize-filename')
  
 function PageNameGenerator(label) {
 
+    console.log(`PageNameGen: ${label}`)
+
     return label.split('/').map(function(pathSegment) {
 
         // remove file path extension
@@ -22,6 +24,9 @@ function PageNameGenerator(label) {
 }
 
 function postProcessPageName(pageName) {
+
+    console.log(`postprocess: ${pageName}`)
+
     pageName = pageName.trim();
 
 	// Sanitize filenames and slugify
@@ -32,13 +37,19 @@ function postProcessPageName(pageName) {
 }
   
 function postProcessLabel(label) {
+    console.log(`postprocesslabel : ${label}`)
+
+
 	label = label.trim();
 	
 	// Remove filename extension
-	label = label.replace(/\.[^/.]+$/, "");
+	// label = label.replace(/\.[^/.]+$/, "");
 	
 	// De-slugify and add matching brackets
-    label = label.split("-").join(" ");
+    label = label.replace(/(?<!\\)-/, " ");
+    label = label.replace(/\\-/, "-");
+
+    // label = label.split("-").join(" ");
     if (vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('showextension')) {
         label += vscode.workspace.getConfiguration("markdown-wiki-links-preview").get('urisuffix');
     }

@@ -20,6 +20,8 @@ Uses a [fork of a markdown-it plugin](https://github.com/thomaskoppelaar/markdow
 - Linking between files with different extensions (e.g. `.markdown` and `.md`) Will cause trouble.
   - Currently, this extension will append any link with a `.md` extension.
 
+- File naming convention is very basic: `lowercase-filenames-without-spaces-or-periods` will work the best. Anything else is bandit territory.  
+
 ## Roadmap
 
 - [X] User defined settings
